@@ -3,9 +3,9 @@ import NavBar from "./NavBar";
 import axios from "axios";
 
 const ViewAll = () => {
-  const [course, getCourse] = useState([]);
+  const [course, getCourse] = useState([])
   const fetchData =()=>{
-    axios.post("http://localhost:8080/view").then((response)=>{
+    axios.post("http://localhost:8086/view").then((response)=>{
         getCourse(response.data)
     }).catch((error)=>{
         alert(error.message)
